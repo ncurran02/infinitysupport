@@ -1,0 +1,61 @@
+---
+import logo from '../assets/infinity_logo.png';
+---
+<div class="drawer drawer-end">
+    <input id="navbar-drawer" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content flex flex-col justify-center w-full bg-white">
+        <div class="flex justify-around my-6">
+            <div class="btn border-none bg-white">
+                <a href="/"><img src={logo.src} width="87"></a>
+            </div>
+            <div class="hidden lg:flex">
+                <a href="https://facebook.com/" class="btn btn-ghost btn-circle p-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="130" height="130" viewBox="0 0 30 30">
+                        <path d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h10v-9h-3v-3h3v-1.611C16,9.339,17.486,8,20.021,8 c1.214,0,1.856,0.09,2.16,0.131V11h-1.729C19.376,11,19,11.568,19,12.718V14h3.154l-0.428,3H19v9h5c1.105,0,2-0.895,2-2V6 C26,4.895,25.104,4,24,4z"></path>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/" class="btn btn-ghost btn-circle p-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="130" height="130" viewBox="0 0 30 30">
+                        <path d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"></path>
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/" class="btn btn-ghost btn-circle p-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="130" height="130" viewBox="0 0 48 48">
+                        <path fill="#000000" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5	V37z"></path><path d="M30,37V26.901c0-1.689-0.819-2.698-2.192-2.698c-0.815,0-1.414,0.459-1.779,1.364	c-0.017,0.064-0.041,0.325-0.031,1.114L26,37h-7V18h7v1.061C27.022,18.356,28.275,18,29.738,18c4.547,0,7.261,3.093,7.261,8.274	L37,37H30z M11,37V18h3.457C12.454,18,11,16.528,11,14.499C11,12.472,12.478,11,14.514,11c2.012,0,3.445,1.431,3.486,3.479	C18,16.523,16.521,18,14.485,18H18v19H11z" opacity=".05"></path><path d="M30.5,36.5v-9.599c0-1.973-1.031-3.198-2.692-3.198c-1.295,0-1.935,0.912-2.243,1.677	c-0.082,0.199-0.071,0.989-0.067,1.326L25.5,36.5h-6v-18h6v1.638c0.795-0.823,2.075-1.638,4.238-1.638	c4.233,0,6.761,2.906,6.761,7.774L36.5,36.5H30.5z M11.5,36.5v-18h6v18H11.5z M14.457,17.5c-1.713,0-2.957-1.262-2.957-3.001	c0-1.738,1.268-2.999,3.014-2.999c1.724,0,2.951,1.229,2.986,2.989c0,1.749-1.268,3.011-3.015,3.011H14.457z" opacity=".07"></path><path fill="#fff" d="M12,19h5v17h-5V19z M14.485,17h-0.028C12.965,17,12,15.888,12,14.499C12,13.08,12.995,12,14.514,12	c1.521,0,2.458,1.08,2.486,2.499C17,15.887,16.035,17,14.485,17z M36,36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698	c-1.501,0-2.313,1.012-2.707,1.99C24.957,25.543,25,26.511,25,27v9h-5V19h5v2.616C25.721,20.5,26.85,19,29.738,19	c3.578,0,6.261,2.25,6.261,7.274L36,36L36,36z"></path>
+                    </svg>
+                </a>
+                <a href="/appointment" class="btn bg-[#20466a] hover:bg-[#20466a]/85 btn-md text-white ml-2">Book an Appointment</a>
+            </div>
+            <div class="lg:hidden">
+                <label for="navbar-drawer" aria-label="open sidebar" class="btn btn-square btn-ghost">
+                    <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m21 15.75c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/></svg>
+                </label>
+            </div>
+        </div>
+        <div class="navbar lg:bg-[#20466a]">
+            <div class="hidden lg:flex flex-none mx-auto">
+                <ul class="menu menu-horizontal font-semibold text-md text-white text-lg">
+                    <li class="hover:text-[#388bd9]"><a href="/about">About Us</a></li>
+                    <li class="hover:text-[#388bd9]"><a href="/ndis">NDIS</a></li>
+                    <li class="hover:text-[#388bd9]"><a href="/listings">Property Listings</a></li>
+                    <li class="hover:text-[#388bd9]"><a href="/gallery">Gallery</a></li>
+                    <li class="hover:text-[#388bd9]"><a href="/newsletter">Newsletter</a></li>
+                    <li class="hover:text-[#388bd9]"><a href="/contact">Contact</a></li>
+                    <li class="hover:text-[#388bd9]"><a href="/referralform">Referral Form</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="drawer-side">
+        <label for="navbar-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+        <ul class="menu bg-base-200 min-h-full w-80 p-4">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/ndis">NDIS</a></li>
+            <li><a href="/listings">Property Listings</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/newsletter">Newsletter</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/referralform">Referral Form</a></li>
+        </ul>
+    </div>
+</div>

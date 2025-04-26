@@ -1,11 +1,70 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import WorkerCard from '../components/WorkerCard.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<div class="container flex justify-around mx-auto p-3">
+		<div class="flex flex-col justify-center items-center">
+			<h1 class="text-4xl font-bold w-[60%] text-center text-[#116089]">WE ARE THE BEST SUPPORT SERVICE</h1>
+			<p class="mt-4 text-lg w-[60%] text-center">
+				<span class="font-bold text-[#116089]">Infinity Support Services</span>
+				is the best Community Support Service
+				with different innovative ideas
+			</p>
+			<div class="flex mt-3">
+				<a href="/about" class="btn bg-[#116089] hover:bg-[#116089]/85 btn-lg text-white px-5">About Us</a>
+			</div>
+		</div>
+		<div>
+			<img src="https://static.wixstatic.com/media/382cc6_72e777aedd73441a8a65fc24f3fa56e5~mv2.jpg/v1/fill/w_982,h_828,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/382cc6_72e777aedd73441a8a65fc24f3fa56e5~mv2.jpg" width="500" height="500" alt="Image" />
+		</div>
+	</div>
+	<div class="flex justify-center mx-auto p-10 bg-[#116089] text-white w-full">
+		<div class="items-center">
+			<h1 class="text-7xl font-semibold text-center">NDIS</h1>
+			<div class="flex flex-row text-center text-xl mt-10">
+				<div class="odd:bg-[#4d6c88] even:bg-[#20466a] p-5 w-48 h-48 flex items-center rounded-l-md">Support Coordination</div>
+				<div class="odd:bg-[#4d6c88] even:bg-[#20466a] p-5 w-48 h-48 flex items-center">Personal Activities</div>
+				<div class="odd:bg-[#4d6c88] even:bg-[#20466a] p-5 w-48 h-48 flex items-center">Developing Life Skills</div>
+				<div class="odd:bg-[#4d6c88] even:bg-[#20466a] p-5 w-48 h-48 flex items-center">Allied Health Assistants</div>
+				<div class="odd:bg-[#4d6c88] even:bg-[#20466a] p-5 w-48 h-48 flex items-center rounded-r-md">Daily Living Skills</div>
+			</div>
+			<div class="flex justify-center mt-10">
+				<a href="/services" class="btn bg-white hover:bg-white/75 btn-lg text-[#20466a] px-5">Other Services</a>
+			</div>
+		</div>
+	</div>
+	<div class="flex justify-center mx-auto p-10 bg-[#4c7124] text-white w-full">
+		<div class="items-center">
+			<div class="flex flex-row justify-around text-center">
+				<div class="mx-20">
+					<h1 class="font-semibold text-6xl">15</h1>
+					<p class="mt-2.5">Years of Experience</p>
+				</div>
+				<div class="mx-20">
+					<h1 class="font-semibold text-6xl">452</h1>
+					<p class="mt-2.5">Smiling Clients</p>
+				</div>
+				<div class="mx-20">
+					<h1 class="font-semibold text-6xl">26</h1>
+					<p class="mt-2.5">Master Certifications</p>
+				</div>
+				<div class="mx-20">
+					<h1 class="font-semibold text-6xl">12</h1>
+					<p class="mt-2.5">Happy Staff</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container flex justify-around mx-auto p-10">
+		<div class="flex flex-col justify-center items-center">
+			<h1 class="text-5xl font-semibold text-center text-[#116089] mb-10">Our Support Workers</h1>
+			<div class="flex flex-row">
+				<WorkerCard name="John Smith" description="Support Worker with 3 years experience" image="https://static.wixstatic.com/media/11062b_a22d7b95955f4ec4b027606e3fa7fcd8~mv2.jpg/v1/fill/w_228,h_228,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_a22d7b95955f4ec4b027606e3fa7fcd8~mv2.jpg" />
+				<WorkerCard name="Olivia Brown" description="Support Worker with 5 years experience" image="https://static.wixstatic.com/media/11062b_0c71ba62385e4ad8a52baaf32ca8a4a7~mv2.jpg/v1/fill/w_228,h_228,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_0c71ba62385e4ad8a52baaf32ca8a4a7~mv2.jpg" />
+				<WorkerCard name="Athena Chan" description="Support Worker with 2 years experience" image="https://static.wixstatic.com/media/11062b_2bca3fd72bdb487a99ad443c7ae22d2a~mv2.jpeg/v1/fill/w_228,h_228,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_2bca3fd72bdb487a99ad443c7ae22d2a~mv2.jpeg" />
+			</div>
+		</div>
+	</div>
 </Layout>

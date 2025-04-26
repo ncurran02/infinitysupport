@@ -1,0 +1,20 @@
+---
+const {
+    name,
+    description,
+    image
+} = Astro.props;
+---
+
+<div class="card w-72 bg-white shadow-md text-[#116089] mx-5 hover:transform hover:scale-105 transition-transform duration-300">
+    <figure class="avatar w-32 h-32 mx-auto mt-5">
+        <img src={image} alt="Image" class="rounded-full" />
+    </figure>
+    <div class="card-body justify-center items-center text-center">
+        <h2 class="card-title text-3xl">{name}</h2>
+        <p class="text-black">{description}</p>
+        <div class="card-actions justify-center mt-2">
+            <a href="#" class="btn bg-[#116089] hover:bg-[#116089]/85 btn-md text-white px-5">Book Now</a>
+        </div>
+    </div>
+</div>
