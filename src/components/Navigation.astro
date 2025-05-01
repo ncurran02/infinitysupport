@@ -4,9 +4,9 @@ import logo from '../assets/infinity_logo.png';
 <div class="drawer drawer-end">
     <input id="navbar-drawer" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content flex flex-col justify-center w-full bg-white">
-        <div class="flex justify-around my-6">
+        <div class="flex justify-between lg:justify-around m-6">
             <div class="btn border-none bg-white">
-                <a href="/"><img src={logo.src} width="87"></a>
+                <a href="/infinitysupport"><img src={logo.src} width="87"></a>
             </div>
             <div class="hidden lg:flex">
                 <a href="https://facebook.com/" class="btn btn-ghost btn-circle p-1">
@@ -32,14 +32,15 @@ import logo from '../assets/infinity_logo.png';
                 </label>
             </div>
         </div>
-        <div class="navbar lg:bg-[#20466a]">
+        <div class="lg:navbar lg:bg-[#20466a]">
             <div class="hidden lg:flex flex-none mx-auto">
                 <ul class="menu menu-horizontal font-semibold text-md text-white text-lg">
-                    <li class="hover:text-[#388bd9]"><a href="#">About Us</a></li>
-                    <li class="hover:text-[#388bd9]"><a href="#">NDIS</a></li>
+                    <li class="hover:text-[#388bd9]"><a href="/infinitysupport/about">About Us</a></li>
+                    <li class="hover:text-[#388bd9]"><a href="#">Events</a></li>
                     <li class="hover:text-[#388bd9]"><a href="#">Property Listings</a></li>
                     <li class="hover:text-[#388bd9]"><a href="#">Gallery</a></li>
                     <li class="hover:text-[#388bd9]"><a href="#">Newsletter</a></li>
+                    <li class="hover:text-[#388bd9]"><a href="#">Blog</a></li>
                     <li class="hover:text-[#388bd9]"><a href="#">Contact</a></li>
                     <li class="hover:text-[#388bd9]"><a href="#">Referral Form</a></li>
                 </ul>
@@ -48,14 +49,15 @@ import logo from '../assets/infinity_logo.png';
     </div>
     <div class="drawer-side">
         <label for="navbar-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-        <ul class="menu bg-base-200 min-h-full w-80 p-4">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">NDIS</a></li>
-            <li><a href="#">Property Listings</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Newsletter</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Referral Form</a></li>
+        <ul class="menu bg-[#116089] min-h-full w-80 p-4 text-white text-xl font-semibold flex justify-center">
+            <li class="m-2"><a href="/infinitysupport/about">About Us</a></li>
+            <li class="m-2"><a href="#">Events</a></li>
+            <li class="m-2"><a href="#">Property Listings</a></li>
+            <li class="m-2"><a href="#">Gallery</a></li>
+            <li class="m-2"><a href="#">Newsletter</a></li>
+            <li class="m-2"><a href="#">Blog</a></li>
+            <li class="m-2"><a href="#">Contact</a></li>
+            <li class="m-2"><a href="#">Referral Form</a></li>
         </ul>
     </div>
 </div>
