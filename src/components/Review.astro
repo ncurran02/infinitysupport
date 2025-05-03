@@ -1,0 +1,21 @@
+---
+import TeamCard from "./TeamCard.astro";
+const GOOGLE_API_KEY = import.meta.env.GOOGLE_API_KEY;
+const GOOGLE_PLACE_ID = import.meta.env.GOOGLE_PLACE_ID;
+const GOOGLE_API_URL = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${GOOGLE_PLACE_ID}&fields=reviews&key=${GOOGLE_API_KEY}`;
+
+const response = await fetch(GOOGLE_API_URL);
+const data = await response.json();
+const reviews = data.result?.reviews ?? [];
+const fiveStarsReviews = reviews.filter((review: { rating: number }) => review.rating === 5);
+---
+
+<div class="flex lg:flex-row flex-col">
+    {fiveStarsReviews.map((review: { author_name: string; profile_photo_url: string; text: string }) => (
+        <TeamCard
+            name={review.author_name}
+            description={review.text}
+            image={null}
+        />
+    ))}
+</div>

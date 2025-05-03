@@ -6,6 +6,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: "https://ncurran.github.io",
+  output: "server",
+  // site: "https://ncurran.github.io",
   base: "infinitysupport",
 });
