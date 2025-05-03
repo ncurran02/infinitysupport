@@ -21,14 +21,6 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
 
-      - name: Export environment variables
-        env:
-          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-          GOOGLE_PLACE_ID: ${{ secrets.GOOGLE_PLACE_ID }}
-        run: |
-          echo "GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}" >> .env
-          echo "GOOGLE_PLACE_ID=${{ secrets.GOOGLE_PLACE_ID }}" >> .env
-
       - name: Install, build, and upload your site
         uses: withastro/action@v3
 
@@ -39,6 +31,14 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Export environment variables
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          GOOGLE_PLACE_ID: ${{ secrets.GOOGLE_PLACE_ID }}
+        run: |
+          echo "GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}" >> .env
+          echo "GOOGLE_PLACE_ID=${{ secrets.GOOGLE_PLACE_ID }}" >> .env
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
