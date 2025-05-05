@@ -12,8 +12,7 @@ export default defineConfig({
   },
 
   output: "server",
-  // site: "https://ncurran.github.io",
-  base: "infinitysupport",
+  // site: "https://infinitysupport.heathcotetech.com.au,
 
   integrations: [svelte()],
   adapter: cloudflare(),
