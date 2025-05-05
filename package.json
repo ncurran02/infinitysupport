@@ -9,9 +9,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.5.2",
+    "@astrojs/svelte": "^7.0.13",
     "@tailwindcss/vite": "^4.1.4",
     "astro": "^5.7.5",
     "daisyui": "^5.0.28",
-    "tailwindcss": "^4.1.4"
+    "svelte": "^5.28.2",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3"
   }
 }
