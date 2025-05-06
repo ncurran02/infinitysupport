@@ -1,9 +1,72 @@
 <script lang="ts">
+    import { tick } from "svelte";
     import { Turnstile } from 'svelte-turnstile';
+
+    let success: boolean = false;
+    let loading: boolean = false;
+    let hidden: boolean = true;
+    let msg: string | null = null;
+    let form: HTMLFormElement | null = null;
+
+    async function submit(e: SubmitEvent) {
+        if (form == null) {
+            return;
+        }
+
+        loading = true;
+        e.preventDefault();
+        
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: json
+            });
+
+            const result = await response.json();
+            if (response.status === 200) {
+                success = true;
+                msg = "Message has been sent!"
+            } else {
+                success = false;
+                msg = result.message;
+            }
+
+            hidden = false;
+        } catch (error) {
+            success = false;
+            msg = "Something went wrong when trying to send a message...";
+        }
+
+        if (success) {
+            form.reset();
+        }
+
+        await tick();
+
+        setTimeout(() => {
+            loading = false;
+            success = false;
+            hidden = true;
+            msg = null;
+        }, 2500);
+    }
 </script>
 
 <div class="flex w-full justify-center flex-col m-5">
-    <form action="#" method="post">
+    <div class="{hidden ? 'hidden' : ''} toast toast-top toast-start">
+        <div class="alert {success ? 'alert-success' : 'alert-error'}">
+            <span>{msg}</span>
+        </div>
+    </div>
+    <form bind:this={form} on:submit={submit} id="contactForm">
         <div class="flex flex-col gap-2 text-left m-5">
             <label class="text-xl text-[#116089] font-semibold" for="name">Name</label>
             <input class="input validator w-full" type="text" id="name" name="name" placeholder="Name" required />
@@ -21,6 +84,6 @@
             <textarea class="input validator w-full h-20 p-2" id="message" name="message" placeholder="Message" required></textarea>
         </div>
         <Turnstile siteKey="0x4AAAAAABabC5nznMKeH-P_" class="m-3" />
-        <button class="btn btn-md bg-[#116089] text-white w-1/2" type="submit">Submit</button>
+        <button class="btn btn-md bg-[#116089] text-white w-1/2" type="submit"><span class="{loading ? 'loading loading-dots loading-md' : ''}"></span>{loading ? '' : 'Submit'}</button>
     </form>
 </div>

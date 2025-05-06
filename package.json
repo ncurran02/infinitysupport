@@ -11,6 +11,8 @@
   "dependencies": {
     "@astrojs/cloudflare": "^12.5.2",
     "@astrojs/svelte": "^7.0.13",
+    "@azure/identity": "^4.9.1",
+    "@microsoft/microsoft-graph-client": "^3.0.7",
     "@tailwindcss/vite": "^4.1.4",
     "astro": "^5.7.5",
     "daisyui": "^5.0.28",
