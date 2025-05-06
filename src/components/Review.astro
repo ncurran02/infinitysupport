@@ -1,17 +1,17 @@
 ---
-import TeamCard from "./TeamCard.astro";
+import ReviewCard from "./ReviewCard.astro";
 const GOOGLE_API_KEY = import.meta.env.GOOGLE_API_KEY;
 const GOOGLE_PLACE_ID = import.meta.env.GOOGLE_PLACE_ID;
 const GOOGLE_API_URL = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${GOOGLE_PLACE_ID}&fields=reviews&key=${GOOGLE_API_KEY}`;
 
 var fiveStarsReviews = [];
 try {
-const response = await fetch(GOOGLE_API_URL);
-const data = await response.json();
-const reviews = data.result?.reviews ?? [];
-fiveStarsReviews = reviews.filter((review: { rating: number }) => review.rating === 5);
+    const response = await fetch(GOOGLE_API_URL);
+    const data = await response.json();
+    const reviews = data.result?.reviews ?? [];
+    fiveStarsReviews = reviews.filter((review: { rating: number }) => review.rating === 5);
 } catch (error) {
-    // Do nothing here
+    console.error("Error fetching reviews:", error);
 }
 ---
 
@@ -21,10 +21,9 @@ fiveStarsReviews = reviews.filter((review: { rating: number }) => review.rating 
             <h2 class="text-2xl font-bold">No reviews available</h2>
         </div>
     ) : fiveStarsReviews.map((review: { author_name: string; profile_photo_url: string; text: string }) => (
-        <TeamCard
+        <ReviewCard
             name={review.author_name}
             description={review.text}
-            image={null}
         />
     ))}
 </div>

@@ -1,0 +1,13 @@
+---
+const {
+    name,
+    description
+} = Astro.props;
+---
+
+<div class="card w-84 bg-white shadow-md text-[#116089] lg:mx-5 lg:my-0 my-5 hover:transform hover:scale-105 transition-transform duration-300">
+    <div class="card-body justify-center items-center text-center">
+        <h2 class="card-title text-2xl">{name}</h2>
+        <p class="text-black italic">"{description}"</p>
+    </div>
+</div>

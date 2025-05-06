@@ -1,5 +1,6 @@
 ---
 import Review from '../components/Review.astro';
+import SimplePropertyCard from '../components/SimplePropertyCard.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -7,13 +8,9 @@ import Layout from '../layouts/Layout.astro';
 	<div class="container flex justify-around mx-auto p-3 lg:my-0 my-25">
 		<div class="flex lg:flex-row flex-col justify-center items-center">
 			<div class="flex flex-col justify-center items-center">
-				<h1 class="text-4xl font-bold w-[60%] text-center text-[#116089]">A Support Service with a Difference</h1>
-				<p class="mt-4 text-lg w-[60%] text-center">
-					<span class="font-bold text-[#116089]">Infinity Support Services</span>
-					is a Community Support Service with innovative ideas
-				</p>
+				<h1 class="text-4xl font-bold w-[60%] text-center text-[#116089]">A Community of Care, Driven by Innovation.</h1>
 				<div class="flex mt-3">
-					<a href="/about" class="btn bg-[#116089] hover:bg-[#116089]/85 btn-lg text-white px-5">About Us</a>
+					<a href="/about" class="btn bg-[#116089] hover:bg-[#116089]/85 btn-lg text-white px-5 my-2.5">About Us</a>
 				</div>
 			</div>
 			<div class="hidden lg:flex">
@@ -32,7 +29,7 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</div>
 	</div>
-	<div class="flex justify-center mx-auto p-10 bg-[#4c7124] text-white w-full">
+	<!-- <div class="flex justify-center mx-auto p-10 bg-[#4c7124] text-white w-full">
 		<div class="items-center">
 			<div class="flex lg:flex-row flex-col justify-around text-center">
 				<div class="lg:mx-20 my-5">
@@ -53,10 +50,23 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 			</div>
 		</div>
+	</div> -->
+	<div class="flex justify-center mx-auto p-10 text-[#116089] w-full">
+		<div>
+			<h1 class="lg:text-6xl text-2xl font-semibold text-center">Property Listings</h1>
+			<div class="flex lg:flex-row flex-col text-center text-xl mt-10">
+				<SimplePropertyCard location="Coburg, VIC, 3058" img="https://static.wixstatic.com/media/382cc6_e4b94fbe996145fc959b1e0637b6cfb8~mv2.jpg/v1/fill/w_622,h_388,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Property%20Listing%20-%20VIC.jpg" />
+				<SimplePropertyCard location="Munno Para, SA, 5115" img="https://static.wixstatic.com/media/382cc6_ce053c94234643e6992c7900cd95593f~mv2.jpg/v1/crop/x_0,y_23,w_2400,h_1497/fill/w_622,h_388,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Property%20Listing%20-%20SA.jpg" />
+				<SimplePropertyCard location="Rokeby, TAS, 7019" img="https://static.wixstatic.com/media/382cc6_7729394a234a4220a2b3c29877bc7893~mv2.jpg/v1/crop/x_0,y_475,w_1041,h_649/fill/w_622,h_388,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Property%20Listing%20-%20TAS.jpg" />
+			</div>
+			<div class="flex justify-center">
+				<a href="/property" class="btn bg-[#116089] hover:bg-[#116089]/85 btn-lg text-white px-5 mt-2.5">View Properties</a>
+			</div>
+		</div>
 	</div>
-	<div class="container flex justify-around mx-auto p-10">
+	<div class="flex justify-around bg-[#116089] mx-auto p-10">
 		<div class="flex flex-col justify-center items-center">
-			<h1 class="text-5xl font-semibold text-center text-[#116089] mb-10">Reviews</h1>
+			<h1 class="text-6xl font-semibold text-center text-white mb-10">Reviews</h1>
 			<Review />
 		</div>
 	</div>

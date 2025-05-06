@@ -1,0 +1,15 @@
+---
+const {
+    location,
+    img
+} = Astro.props;
+---
+
+<div class="card bg-white lg:w-96 w-72 shadow-sm m-5">
+    <figure>
+        <img src={img} />
+    </figure>
+    <div class="card-body">
+        <h2 class="card-title flex justify-center">{location}</h2>
+    </div>
+</div>
