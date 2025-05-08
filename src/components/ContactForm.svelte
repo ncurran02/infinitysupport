@@ -61,7 +61,7 @@
 </script>
 
 <div class="flex w-full justify-center flex-col m-5">
-    <div class="{hidden ? 'hidden' : ''} toast toast-top toast-start">
+    <div class="{hidden ? 'hidden' : ''} toast toast-top toast-start z-10">
         <div class="alert {success ? 'alert-success' : 'alert-error'}">
             <span>{msg}</span>
         </div>
