@@ -33,15 +33,16 @@
             const result = await response.json();
             if (response.status === 200) {
                 success = true;
-                msg = "Message has been sent!"
+                msg = "Your message has been sent!"
             } else {
                 success = false;
-                msg = result.message;
+                msg = result.message || "Something went wrong when trying to send a message...";
             }
 
             hidden = false;
         } catch (error) {
             success = false;
+            hidden = false;
             msg = "Something went wrong when trying to send a message...";
         }
 
