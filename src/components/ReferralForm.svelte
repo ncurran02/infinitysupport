@@ -78,7 +78,8 @@
         const json = JSON.stringify({
             ...formData,
             type: "referral",
-            attachment: fileAttachment
+            attachment: fileAttachment,
+            'cf-turnstile-response': fd.get('cf-turnstile-response')
         });
 
         try {
