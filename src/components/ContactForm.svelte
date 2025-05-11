@@ -18,7 +18,10 @@
         
         const formData = new FormData(form);
         const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
+        const json = JSON.stringify({
+            ...object,
+            type: "contact"
+        });
 
         try {
             const response = await fetch("/api/contact", {
@@ -85,6 +88,6 @@
             <textarea class="input validator w-full h-20 p-2" id="message" name="message" placeholder="Message" required></textarea>
         </div>
         <Turnstile siteKey="0x4AAAAAABabC5nznMKeH-P_" class="m-3" />
-        <button class="btn btn-md bg-[#116089] text-white w-1/2" type="submit"><span class="{loading ? 'loading loading-dots loading-md' : ''}"></span>{loading ? '' : 'Submit'}</button>
+        <button class="btn btn-md bg-[#6cab38] text-white w-1/2" type="submit"><span class="{loading ? 'loading loading-dots loading-md' : ''}"></span>{loading ? '' : 'Submit'}</button>
     </form>
 </div>

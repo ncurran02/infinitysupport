@@ -10,7 +10,7 @@ import Layout from '../layouts/Layout.astro';
 			<div class="flex flex-col justify-center items-center">
 				<h1 class="text-4xl font-bold w-[60%] text-center text-[#116089]">A Community of Care, Driven by Innovation.</h1>
 				<div class="flex mt-3">
-					<a href="/about" class="btn bg-[#116089] hover:bg-[#116089]/85 btn-lg text-white px-5 my-2.5">About Us</a>
+					<a href="/about" class="btn bg-[#6cab38] hover:bg-[#6cab38]/85 btn-lg text-white px-5 my-2.5">About Us</a>
 				</div>
 			</div>
 			<div class="hidden lg:flex">
@@ -45,7 +45,7 @@ import Layout from '../layouts/Layout.astro';
 	<div class="flex justify-around bg-[#116089] mx-auto p-10">
 		<div class="flex flex-col justify-center items-center">
 			<h1 class="text-6xl font-semibold text-center text-white mb-10">Reviews</h1>
-			<Review />
+			<Review server:defer />
 		</div>
 	</div>
 </Layout>
