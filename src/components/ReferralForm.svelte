@@ -251,7 +251,7 @@
             </div>
         </div>
         <label class="text-2xl text-[#116089] font-semibold mt-10 text-center" for="days">Preferred Support Days</label>
-        <div id="days" class="gap-2 m-5 w-[85%] flex lg:flex-row flex-col lg:items-center items-start mx-auto">
+        <div id="days" class="gap-2 m-5 w-[90%] flex lg:flex-row flex-col lg:items-center items-start mx-auto">
             <div class="flex flex-row justify-center items-center mx-3">
                 <input bind:checked={formData.days.sunday} class="checkbox checked:bg-[#6cab38] checked:text-white m-3" type="checkbox" id="sunday" name="sunday" />
                 <label class="text-md text-[#116089]" for="sunday">Sunday</label>
@@ -281,7 +281,7 @@
                 <label class="text-md text-[#116089]" for="saturday">Saturday</label>
             </div>
         </div>
-        <input type="file" class="file-input file-input-neutral m-2" id="file" name="attachment" />
+        <input type="file" class="file-input file-input-neutral m-2 lg:w-1/3 w-1/2" id="file" name="attachment" />
         <Turnstile siteKey="0x4AAAAAABabC5nznMKeH-P_" class="m-3" />
         <button class="btn btn-md bg-[#6cab38] hover:bg-[#6cab38]/85 text-white w-1/2" type="submit"><span class="{loading ? 'loading loading-dots loading-md' : ''}"></span>{loading ? '' : 'Submit'}</button>
     </form>
