@@ -32,11 +32,7 @@
         plan: {
             name: "",
             email: "",
-            type: {
-                ndia: false,
-                selfManaged: false,
-                planManaged: false
-            }
+            type: "",
         },
         ndis: {
             ndisNumber: "",
@@ -61,24 +57,26 @@
 
         loading = true;
         e.preventDefault();
-        
-        const fd = new FormData(form);
-        const file = fd.get('attachment') as File | null;
 
-        let fileAttachment = null;
-        if (file && file.size > 0) {
-            const base64 = await readFileAsBase64(file);
-            fileAttachment = {
-                name: file.name,
-                contentType: file.type,
-                contentBytes: base64
-            };
+        const fd = new FormData(form);
+
+        const input = document.getElementById('file') as HTMLInputElement;
+        let fileAttachments = [];
+        if (input && input.files && input.files.length > 0) {
+            for (const file of input.files) {
+                const base64 = await readFileAsBase64(file);
+                fileAttachments.push({
+                    name: file.name,
+                    contentType: file.type,
+                    contentBytes: base64
+                });
+            }
         }
-        
+
         const json = JSON.stringify({
             ...formData,
             type: "referral",
-            attachment: fileAttachment,
+            attachments: fileAttachments,
             'cf-turnstile-response': fd.get('cf-turnstile-response')
         });
 
@@ -221,15 +219,15 @@
                 <label class="text-xl text-[#116089] font-semibold" for="plantype">How is the plan managed?</label>
                 <div id="plantype" class="flex lg:flex-row flex-col lg:my-0 my-2 lg:items-center items-start">
                     <div class="flex flex-row justify-center items-center mx-5">
-                        <input bind:checked={formData.plan.type.ndia} class="checkbox checked:bg-[#6cab38] checked:text-white m-2" type="checkbox" id="ndia" name="ndia" />
+                        <input bind:group={formData.plan.type} class="radio checked:bg-[#6cab38] checked:text-white m-2" type="radio" id="ndia" name="plantype-radio" value="ndia" required />
                         <label class="text-lg text-[#116089]" for="ndia">NDIA</label>
                     </div>
                     <div class="flex flex-row justify-center items-center mx-5">
-                        <input bind:checked={formData.plan.type.selfManaged} class="checkbox checked:bg-[#6cab38] checked:text-white m-2" type="checkbox" id="selfmanaged" name="selfmanaged" />
+                        <input bind:group={formData.plan.type} class="radio checked:bg-[#6cab38] checked:text-white m-2" type="radio" id="selfmanaged" name="plantype-radio" value="self-managed" />
                         <label class="text-lg text-[#116089]" for="selfmanaged">Self Managed</label>
                     </div>
                     <div class="flex flex-row justify-center items-center mx-5">
-                        <input bind:checked={formData.plan.type.planManaged} class="checkbox checked:bg-[#6cab38] checked:text-white m-2" type="checkbox" id="planmanaged" name="planmanaged" />
+                        <input bind:group={formData.plan.type} class="radio checked:bg-[#6cab38] checked:text-white m-2" type="radio" id="planmanaged" name="plantype-radio" value="plan-managed" />
                         <label class="text-lg text-[#116089]" for="planmanaged">Plan Managed</label>
                     </div>
                 </div>
@@ -251,7 +249,7 @@
             </div>
         </div>
         <label class="text-2xl text-[#116089] font-semibold mt-10 text-center" for="days">Preferred Support Days</label>
-        <div id="days" class="gap-2 m-5 w-[90%] flex lg:flex-row flex-col lg:items-center items-start mx-auto">
+        <div id="days" class="gap-2 m-5 w-[90%] flex lg:flex-row flex-col lg:items-center justify-center items-start mx-auto">
             <div class="flex flex-row justify-center items-center mx-3">
                 <input bind:checked={formData.days.sunday} class="checkbox checked:bg-[#6cab38] checked:text-white m-3" type="checkbox" id="sunday" name="sunday" />
                 <label class="text-md text-[#116089]" for="sunday">Sunday</label>
@@ -281,7 +279,7 @@
                 <label class="text-md text-[#116089]" for="saturday">Saturday</label>
             </div>
         </div>
-        <input type="file" class="file-input file-input-neutral m-2 lg:w-1/3 w-1/2" id="file" name="attachment" />
+        <input type="file" class="file-input file-input-neutral m-2 lg:w-1/3 w-1/2" id="file" name="attachment" multiple />
         <Turnstile siteKey="0x4AAAAAABabC5nznMKeH-P_" class="m-3" />
         <button class="btn btn-md bg-[#6cab38] hover:bg-[#6cab38]/85 text-white w-1/2" type="submit"><span class="{loading ? 'loading loading-dots loading-md' : ''}"></span>{loading ? '' : 'Submit'}</button>
     </form>
