@@ -6,26 +6,51 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Properties | Infinity Support Services">
     <div class="flex flex-col justify-center items-center p-10">
         <h1 class="text-5xl text-[#116089] font-bold m-5">Properties</h1>
-        <ComplexPropertyCard
-            id="house"
-            details="Modern 2-Bedroom HPS+R - Kipfler Street, Munno Para"
-            location="Munno Para, SA, 5115"
-            images={["https://static.wixstatic.com/media/382cc6_ce053c94234643e6992c7900cd95593f~mv2.jpg/v1/crop/x_0,y_23,w_2400,h_1497/fill/w_622,h_388,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Property%20Listing%20-%20SA.jpg","https://static.wixstatic.com/media/382cc6_ce053c94234643e6992c7900cd95593f~mv2.jpg/v1/crop/x_0,y_23,w_2400,h_1497/fill/w_622,h_388,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Property%20Listing%20-%20SA.jpg"]}
-            url="https://www.housinghub.org.au/property-detail/48H9A/2CGU1"
-        />
-        <ComplexPropertyCard
-            id="anotherhouse"
-            details="Modern 2-Bedroom HPS+R - Kipfler Street, Munno Para"
-            location="Munno Para, SA, 5115"
-            images={["https://static.wixstatic.com/media/382cc6_ce053c94234643e6992c7900cd95593f~mv2.jpg/v1/crop/x_0,y_23,w_2400,h_1497/fill/w_622,h_388,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Property%20Listing%20-%20SA.jpg"]}
-            url="https://www.housinghub.org.au/property-detail/48H9A/2CGU1"
-        />
-        <ComplexPropertyCard
-            id="morehouse"
-            details="Modern 2-Bedroom HPS+R - Kipfler Street, Munno Para"
-            location="Munno Para, SA, 5115"
-            images={["https://static.wixstatic.com/media/382cc6_ce053c94234643e6992c7900cd95593f~mv2.jpg/v1/crop/x_0,y_23,w_2400,h_1497/fill/w_622,h_388,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Property%20Listing%20-%20SA.jpg"]}
-            url="https://www.housinghub.org.au/property-detail/48H9A/2CGU1"
-        />
+        <div class="flex flex-col justify-center items-center m-2 w-[80%]">
+            <p class="text-center text-xl">Infinity Support Services offers a range of properties across Australia, providing comfortable and accessible living spaces for our clients. Explore our listings to find the perfect home that meets your needs.</p>
+            <a href="https://www.housinghub.org.au/provider-property-listing/48H9A" target="_blank" rel="noopener noreferrer"><button class="btn bg-[#6cab38] text-white hover:bg-[#6cab38]/85 m-5">View All Properties on Housing Hub</button></a>
+        </div>
+        <div class="flex lg:flex-row flex-col justify-center items-center">
+            <ComplexPropertyCard
+                id="hps+rmunno"
+                details="Modern 2-Bedroom HPS+R - Kipfler Street, Munno Para"
+                location="Munno Para, SA, 5115"
+                images={["https://res.cloudinary.com/hc4clemkt/image/upload/v1741150197/xstikuj2vjdmqzcos3oj.jpg",
+                    "https://res.cloudinary.com/hc4clemkt/image/upload/v1741150196/zqbmcl3opswfmpne2fh3.jpg",
+                    "https://res.cloudinary.com/hc4clemkt/image/upload/v1741150196/cpczgt8l3uowbce2bhii.jpg",
+                    "https://res.cloudinary.com/hc4clemkt/image/upload/v1741150196/dy7agqssp2inzgu99ijj.jpg",
+                    "https://res.cloudinary.com/hc4clemkt/image/upload/v1741150197/bij4sqqw6jd3mibthq4z.jpg",
+                    "https://res.cloudinary.com/hc4clemkt/image/upload/v1741150197/faoerahkh87nwp9wmrpb.jpg",
+                    "https://res.cloudinary.com/hc4clemkt/image/upload/v1741150197/kvcqck2yxbqvbwmcadxm.jpg",
+                    "https://res.cloudinary.com/hc4clemkt/image/upload/v1741150197/emfefpeottjl5bd3k1uh.jpg",
+                    "https://res.cloudinary.com/hc4clemkt/image/upload/v1741150197/wvln8uaopct5hhkq9ogt.jpg"
+                ]}
+                url="https://www.housinghub.org.au/property-detail/48H9A/2CGU1"
+            />
+            <ComplexPropertyCard
+                id="hpsalrosedeanside"
+                details="Accessible 2-Bedroom HPS Property - Alrose Grove, Deanside"
+                location="Deanside, VIC, 3336"
+                images={["https://res.cloudinary.com/hc4clemkt/image/upload/v1741150862/a5l2o3cevonfgfyf7m3d.jpg",
+                    "https://res.cloudinary.com/hc4clemkt/image/upload/v1741150862/oa7yzbe895zl7qsha110.jpg",
+                    "https://res.cloudinary.com/hc4clemkt/image/upload/v1741150862/pkd0si6v2ke10iagq3gk.jpg",
+                    "https://res.cloudinary.com/hc4clemkt/image/upload/v1741150862/tif9ktvvosjxgtfkmsp0.jpg",
+                    "https://res.cloudinary.com/hc4clemkt/image/upload/v1741150862/l8chfzrhn4n3yha6gphy.jpg",
+                    "https://res.cloudinary.com/hc4clemkt/image/upload/v1741150862/rjfhxzgffrnlz0mnh8vu.jpg",
+                    "https://res.cloudinary.com/hc4clemkt/image/upload/v1741150863/pr0ak79466vdkujdom8x.jpg"
+                ]}
+                url="https://www.housinghub.org.au/property-detail/48H9A/7UEVH"
+            />
+            <ComplexPropertyCard
+                id="accessiblesilmaddenmorewell"
+                details="Madden Street, Morwell – Accessible SIL Home"
+                location="Morwell, VIC, 3840"
+                images={["https://res.cloudinary.com/hc4clemkt/image/upload/v1695809098/kue71svnot9okyiajqka.jpg",
+                    "https://res.cloudinary.com/hc4clemkt/image/upload/v1695809098/u9e98cqoszw3rgdvawex.jpg",
+                    "https://res.cloudinary.com/hc4clemkt/image/upload/v1695809099/azhgfu0bm61uzbbdahuh.jpg"
+                ]}
+                url="https://www.housinghub.org.au/property-detail/48H9A/7UEVH"
+            />
+        </div>
     </div>
 </Layout>

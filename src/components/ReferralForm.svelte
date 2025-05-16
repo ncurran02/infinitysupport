@@ -170,20 +170,20 @@
         <label class="text-2xl text-[#116089] font-semibold mt-10 text-center" for="services">Services Required</label>
         <div id="services" class="gap-2 text-left m-5 w-[85%] flex lg:flex-row flex-col justify-between lg:items-center items-start mx-auto">
             <div class="flex flex-row justify-center items-center mx-5">
-                <input bind:checked={formData.services.support} class="checkbox checked:bg-[#6cab38] checked:text-white m-3" type="checkbox" id="support" name="support" />
-                <label class="text-lg text-[#116089]" for="support">Support Coordination</label>
-            </div>
-            <div class="flex flex-row justify-center items-center mx-5">
-                <input bind:checked={formData.services.community} class="checkbox checked:bg-[#6cab38] checked:text-white m-3" type="checkbox" id="community" name="community" />
-                <label class="text-lg text-[#116089]" for="community">Community Access</label>
+                <input bind:checked={formData.services.accomodation} class="checkbox checked:bg-[#6cab38] checked:text-white m-3" type="checkbox" id="accomodation" name="accomodation" />
+                <label class="text-lg text-[#116089]" for="accomodation">Accomodation</label>
             </div>
             <div class="flex flex-row justify-center items-center mx-5">
                 <input bind:checked={formData.services.allied} class="checkbox checked:bg-[#6cab38] checked:text-white m-3" type="checkbox" id="allied" name="allied" />
                 <label class="text-lg text-[#116089]" for="allied">Allied Health Assistants</label>
             </div>
             <div class="flex flex-row justify-center items-center mx-5">
-                <input bind:checked={formData.services.accomodation} class="checkbox checked:bg-[#6cab38] checked:text-white m-3" type="checkbox" id="accomodation" name="accomodation" />
-                <label class="text-lg text-[#116089]" for="accomodation">Accomodation</label>
+                <input bind:checked={formData.services.community} class="checkbox checked:bg-[#6cab38] checked:text-white m-3" type="checkbox" id="community" name="community" />
+                <label class="text-lg text-[#116089]" for="community">Community Access</label>
+            </div>
+            <div class="flex flex-row justify-center items-center mx-5">
+                <input bind:checked={formData.services.support} class="checkbox checked:bg-[#6cab38] checked:text-white m-3" type="checkbox" id="support" name="support" />
+                <label class="text-lg text-[#116089]" for="support">Support Coordination</label>
             </div>
         </div>
         <label class="text-2xl text-[#116089] font-semibold mt-10 text-center" for="coordinator">Support Coordinator/LAC/Referring Practitioner</label>
@@ -236,7 +236,7 @@
         <label class="text-2xl text-[#116089] font-semibold mt-10 text-center" for="ndis">NDIS Details</label>
         <div id="ndis" class="flex flex-col justify-center items-center w-full">
             <div class="gap-2 text-left m-5 w-[85%] flex flex-col">
-                <label class="text-xl text-[#116089] font-semibold" for="number">Name</label>
+                <label class="text-xl text-[#116089] font-semibold" for="number">NDIS Number</label>
                 <input bind:value={formData.ndis.ndisNumber} class="input validator w-full" type="text" id="number" name="number" placeholder="NDIS Number" required />
             </div>
             <div class="gap-2 text-left m-5 w-[85%] flex flex-col">

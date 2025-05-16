@@ -1,4 +1,5 @@
 ---
+import Main from '../assets/main.avif'
 import Review from '../components/Review.astro';
 import SimplePropertyCard from '../components/SimplePropertyCard.astro';
 import Layout from '../layouts/Layout.astro';
@@ -14,7 +15,7 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 			</div>
 			<div class="hidden lg:flex">
-				<img src="https://static.wixstatic.com/media/382cc6_72e777aedd73441a8a65fc24f3fa56e5~mv2.jpg/v1/fill/w_982,h_828,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/382cc6_72e777aedd73441a8a65fc24f3fa56e5~mv2.jpg" width="500" height="500" alt="Image" />
+				<img src={Main.src} width="500" height="500" alt="Image" />
 			</div>
 		</div>
 	</div>
@@ -33,9 +34,9 @@ import Layout from '../layouts/Layout.astro';
 		<div>
 			<h1 class="lg:text-6xl text-2xl font-semibold text-center">Property Listings</h1>
 			<div class="flex lg:flex-row flex-col text-center text-xl mt-10">
-				<SimplePropertyCard location="Coburg, VIC, 3058" img="https://static.wixstatic.com/media/382cc6_e4b94fbe996145fc959b1e0637b6cfb8~mv2.jpg/v1/fill/w_622,h_388,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Property%20Listing%20-%20VIC.jpg" />
-				<SimplePropertyCard location="Munno Para, SA, 5115" img="https://static.wixstatic.com/media/382cc6_ce053c94234643e6992c7900cd95593f~mv2.jpg/v1/crop/x_0,y_23,w_2400,h_1497/fill/w_622,h_388,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Property%20Listing%20-%20SA.jpg" />
-				<SimplePropertyCard location="Rokeby, TAS, 7019" img="https://static.wixstatic.com/media/382cc6_7729394a234a4220a2b3c29877bc7893~mv2.jpg/v1/crop/x_0,y_475,w_1041,h_649/fill/w_622,h_388,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Property%20Listing%20-%20TAS.jpg" />
+				<SimplePropertyCard location="Munno Para, SA, 5115" img="https://res.cloudinary.com/hc4clemkt/image/upload/v1741150197/xstikuj2vjdmqzcos3oj.jpg" server:defer />
+				<SimplePropertyCard location="Deanside, VIC, 3336" img="https://res.cloudinary.com/hc4clemkt/image/upload/v1741150862/a5l2o3cevonfgfyf7m3d.jpg" server:defer />
+				<SimplePropertyCard location="Morwell, VIC, 3840" img="https://res.cloudinary.com/hc4clemkt/image/upload/v1695809098/kue71svnot9okyiajqka.jpg" server:defer />
 			</div>
 			<div class="flex justify-center">
 				<a href="/properties" class="btn bg-[#6cab38] hover:bg-[#6cab38]/85 btn-lg text-white px-5 mt-2.5">View Properties</a>
