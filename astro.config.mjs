@@ -12,7 +12,6 @@ export default defineConfig({
   },
 
   output: "server",
-  // site: "https://infinitysupport.heathcotetech.com.au,
 
   integrations: [svelte()],
   adapter: cloudflare(),
