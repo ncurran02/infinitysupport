@@ -70,24 +70,24 @@
             <span>{msg}</span>
         </div>
     </div>
-    <form bind:this={form} on:submit={submit} id="contactForm">
-        <div class="flex flex-col gap-2 text-left m-5">
+    <form bind:this={form} on:submit={submit} id="contactForm" class="flex flex-col justify-center items-center">
+        <div class="flex flex-col gap-2 text-left w-full m-5">
             <label class="text-xl text-[#116089] font-semibold" for="name">Name</label>
             <input class="input validator w-full" type="text" id="name" name="name" placeholder="Name" required />
         </div>
-        <div class="flex flex-col gap-2 text-left m-5">
+        <div class="flex flex-col gap-2 text-left w-full m-5">
             <label class="text-xl text-[#116089] font-semibold" for="email">Email</label>
             <input class="input validator w-full" type="email" id="email" name="email" placeholder="Email" required />
         </div>
-        <div class="flex flex-col gap-2 text-left m-5">
-            <label class="text-xl text-[#116089] font-semibold" for="phone">Phone</label>
+        <div class="flex flex-col gap-2 text-left w-full m-5">
+            <label class="text-xl text-[#116089] w-full font-semibold" for="phone">Phone</label>
             <input class="input validator w-full" type="text" id="phone" name="phone" placeholder="Phone" required />
         </div>
-        <div class="flex flex-col gap-2 text-left m-5">
+        <div class="flex flex-col gap-2 text-left w-full m-5">
             <label class="text-xl text-[#116089] font-semibold" for="message">Message</label>
-            <textarea class="input validator w-full h-20 p-2" id="message" name="message" placeholder="Message" required></textarea>
+            <textarea class="input validator w-full h-40 p-2" id="message" name="message" placeholder="Message" required></textarea>
         </div>
         <Turnstile siteKey="0x4AAAAAABabC5nznMKeH-P_" class="m-3" />
-        <button class="btn btn-md bg-[#6cab38] text-white w-1/2" type="submit"><span class="{loading ? 'loading loading-dots loading-md' : ''}"></span>{loading ? '' : 'Submit'}</button>
+        <button class="btn btn-md bg-[#6cab38] text-white w-2/3" type="submit"><span class="{loading ? 'loading loading-dots loading-md' : ''}"></span>{loading ? '' : 'Submit'}</button>
     </form>
 </div>

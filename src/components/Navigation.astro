@@ -6,7 +6,7 @@ import logo from '../assets/infinity_logo.png';
     <div class="drawer-content flex flex-col justify-center w-full bg-white">
         <div class="flex justify-between lg:justify-around m-6">
             <div class="btn border-none bg-white">
-                <a href="/"><img src={logo.src} width="120"></a>
+                <a href="/"><img src={logo.src} width="100"></a>
             </div>
             <div class="hidden lg:flex">
                 <a href="https://facebook.com/" class="btn btn-ghost btn-circle p-1">
@@ -35,6 +35,7 @@ import logo from '../assets/infinity_logo.png';
         <div class="lg:navbar lg:bg-[#20466a]">
             <div class="hidden lg:flex flex-none mx-auto">
                 <ul class="menu menu-horizontal font-semibold text-md text-white text-lg">
+                    <li class="hover:text-[#388bd9]"><a href="/">Home</a></li>
                     <li class="hover:text-[#388bd9]"><a href="/about">About Us</a></li>
                     <li class="hover:text-[#388bd9]"><a href="/programs">Programs</a></li>
                     <li class="hover:text-[#388bd9]"><a href="/properties">Property Listings</a></li>
@@ -44,9 +45,10 @@ import logo from '../assets/infinity_logo.png';
             </div>
         </div>
     </div>
-    <div class="drawer-side">
+    <div class="drawer-side z-10">
         <label for="navbar-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
         <ul class="menu bg-[#116089] min-h-full w-80 p-4 text-white text-xl font-semibold flex justify-center">
+            <li class="m-2"><a href="/">Home</a></li>
             <li class="m-2"><a href="/about">About Us</a></li>
             <li class="m-2"><a href="/programs">Programs</a></li>
             <li class="m-2"><a href="/properties">Property Listings</a></li>
