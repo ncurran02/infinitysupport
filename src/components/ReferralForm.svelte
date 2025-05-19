@@ -50,7 +50,9 @@
             saturday: false,
             sunday: false
         }
-    }
+    };
+
+    const freshFormData = formData;
 
     function validate() {
         const { participant, services, coordinator, plan, ndis, days } = formData;
@@ -204,6 +206,7 @@
 
         if (success) {
             form.reset();
+            formData = freshFormData;
         }
 
         await tick();
