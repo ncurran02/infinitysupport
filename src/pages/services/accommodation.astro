@@ -1,0 +1,31 @@
+---
+import AccommodationPic from "../../assets/accommodation.jpg";
+import Layout from "../../layouts/Layout.astro"
+---
+
+<Layout title="Accommodation | Infinity Support Services">
+    <div class="flex justify-around mx-auto p-10">
+        <div class="flex flex-col justify-center items-center mt-5">
+            <h1 class="lg:text-5xl text-3xl font-bold text-[#116089]">Accommodation</h1>
+            <div class="flex lg:flex-row flex-col bg-white shadow-md mt-10 w-[90%]">
+                <figure>
+                    <img src={AccommodationPic.src} />
+                </figure>
+                <div class="card-body flex flex-col items-start">
+                    <p class="font-semibold text-[#116089]">
+                        Comfortable, Safe, and Empowering Accommodation
+                    </p>
+                    <p>
+                        Welcome to a home where independence meets support. Our <span class="font-semibold text-[#116089]">Supported Independent Living (SIL)</span> and <span class="font-semibold text-[#116089]">Specialist Disability Accommodation (SDA)</span> options are thoughtfully designed to provide a comfortable, secure, and inclusive living environment for people with disability.
+                    </p>
+                    <p>
+                        Whether you're looking for a vibrant shared home or a quiet more relaxed space, we tailor our support to suit your unique needs, goals, and lifestyle. With 24/7 assistance available, accessible features, and a strong focus on community and choice, we empower you to live life on your own terms.
+                    </p>
+                    <p class="font-semibold text-[#116089]">
+                        Navigating your journey together.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>

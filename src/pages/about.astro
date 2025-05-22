@@ -2,7 +2,6 @@
 import Mission from "../assets/mission.jpg";
 import Vision from "../assets/vision.jpg";
 import Values from "../assets/values.jpeg";
-import TeamCard from "../components/TeamCard.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -12,23 +11,20 @@ import Layout from "../layouts/Layout.astro";
             <h1 class="lg:text-5xl text-3xl font-bold text-[#116089]">About Us</h1>
             <div class="bg-white flex flex-col justify-center mt-5 p-10 rounded-md shadow-md lg:w-[90%] w-[100%]">
                 <p>
-                    <span class="font-bold text-[#116089]">Infinity Support Services Australia Pty Ltd </span>
-                    is a registered NDIS provider offering disability and community services across Victoria, Tasmania, South Australia and Queensland.
-                    We specialise in supporting individuals with dual disabilities and mental health conditions, helping them achieve their goals through a collaborative, recovery-focused approach. Our experienced team delivers tailored services including:
-                    <ul class="list-disc list-inside pt-6">
-                        <li>Psychosocial Recovery Coaching</li>
-                        <li>Community Nursing Care</li>
-                        <li>Accommodation (SIL), Respite & Core Supports</li>
-                        <li>Day Programs, Group Activities, and Holiday Programs</li>
-                        <li>Social & Civic Participation</li>
+                    At <span class="text-[#116089] font-semibold">Infinity Support Services</span>, we don't just deliver care—we unlock potential.
+                    As a nationally registered NDIS provider, we specialise in supporting individuals with dual disabilities and psychosocial challenges.
+                    Our multidisciplinary team is committed to turning aspirations into everyday achievements.
+                </p>
+                <p class="mt-5 mb-2">
+                    <span class="text-[#116089] font-semibold">What makes us different?</span>
+                    <ul class="list-disc list-inside ml-5">
+                        <li class="m-2"><span class="text-[#116089] font-semibold">Personalised Support</span>: From Supported Independent Living (SIL) and Individualised Living Options (ILO) to community engagement, nursing, allied health, and specialist support coordination—every service is tailored to your unique goals and lifestyle.</li>
+                        <li class="m-2"><span class="text-[#116089] font-semibold">Strength-Based Approach</span>: We focus on what's strong, not what's wrong. Our approach amplifies your strengths while building new skills and confidence.</li>
+                        <li class="m-2"><span class="text-[#116089] font-semibold">Genuine Partnership</span>: You're in the driver's seat—we provide the map, tools, and support so you can make informed choices and thrive on your own terms.</li>
                     </ul>
                 </p>
-                <p class="pt-6">
-                    At Infinity, we place clients at the centre of their support. We use a strength-based model to empower individuals with choice, control, and the opportunity to live meaningful, independent lives.
-                    Our values — 
-                    <span class="relative font-bold text-[#116089]">compassion, empathy, teamwork, respect, diversity, and stewardship </span>
-                    — guide everything we do. We believe in ability over disability, and in recovery as a real and achievable journey. Through respectful communication and strong partnerships with families and stakeholders, we provide holistic, client-focused care.
-                    <br/>We listen, support, and work with you to build a life filled with purpose, growth, and dignity.
+                <p class="mt-5">
+                    Whether it's building daily living skills, connecting with community, or achieving greater independence, Infinity is with you—every step, every success, every time. Let's create a life you love, together.
                 </p>
             </div>
         </div>
@@ -70,14 +66,4 @@ import Layout from "../layouts/Layout.astro";
             </div>
         </div>
     </div>
-    <!-- <div class="flex justify-around mx-auto p-10">
-        <div class="flex flex-col justify-center items-center">
-            <h1 class="lg:text-5xl text-3xl font-semibold text-center text-[#116089] mb-10">Meet Our Team</h1>
-            <div class="flex lg:flex-row flex-col">
-                <TeamCard name="John Doe" description="Chief Executive Officer" image="https://static.wixstatic.com/media/11062b_a22d7b95955f4ec4b027606e3fa7fcd8~mv2.jpg/v1/fill/w_228,h_228,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_a22d7b95955f4ec4b027606e3fa7fcd8~mv2.jpg" />
-                <TeamCard name="Jane Smith" description="Operations Manager" image="https://static.wixstatic.com/media/11062b_0c71ba62385e4ad8a52baaf32ca8a4a7~mv2.jpg/v1/fill/w_228,h_228,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_0c71ba62385e4ad8a52baaf32ca8a4a7~mv2.jpg" />
-                <TeamCard name="Alice Johnson" description="Service Delivery and Business Development Manager" image="https://static.wixstatic.com/media/11062b_2bca3fd72bdb487a99ad443c7ae22d2a~mv2.jpeg/v1/fill/w_228,h_228,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_2bca3fd72bdb487a99ad443c7ae22d2a~mv2.jpeg" />
-            </div>
-        </div>
-    </div> -->
 </Layout>
