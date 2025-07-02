@@ -1,19 +1,36 @@
 ---
 const {
     name,
-    description,
-    image
+    jobTitle,
+    image,
+    description
 } = Astro.props;
+
+function sanitiseName(name: string): string {
+    return name.replaceAll(' ', '_').replaceAll('.', '');
+}
 ---
 
-<div class="card w-84 bg-white shadow-md text-[#116089] lg:mx-5 lg:my-0 my-5 hover:transform hover:scale-105 transition-transform duration-300">
+<div class="card w-84 bg-white shadow-md text-[#116089] hover:transform hover:scale-105 transition-transform duration-300">
     {image && (
-        <figure class="avatar w-32 h-32 mx-auto mt-5">
+        <figure class="avatar w-36 h-36 mx-auto mt-5 px-3 pt-3">
             <img src={image} alt="Image" class="rounded-full" />
         </figure>
     )}
     <div class="card-body justify-center items-center text-center">
         <h2 class="card-title text-2xl">{name}</h2>
-        <p class="text-black">{description}</p>
+        <p class="text-black text-sm font-semibold">{jobTitle}</p>
+        <div class="card-actions justify-end mt-2.5">
+           <button class="btn bg-[#6cab38] text-white hover:bg-[#6cab38]/85" onclick={sanitiseName(name) + "_modal.showModal()"}>About Me</button>
+           <dialog id={sanitiseName(name) + "_modal"} class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <h3 class="text-lg font-bold">About {name}</h3>
+                    <p class="py-4 text-black whitespace-pre-line">{description}</p>
+                    <form method="dialog"> 
+                        <button class="btn bg-[#6cab38] text-white hover:bg-[#6cab38]/85">Close</button>
+                    </form>
+                </div>
+           </dialog>
+        </div>
     </div>
 </div>
