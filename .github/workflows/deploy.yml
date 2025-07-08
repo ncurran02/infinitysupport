@@ -18,22 +18,22 @@ jobs:
         npm run build
 
     - name: 📤 Deploy build to server via SCP
-      uses: appleboy/scp-action@v0.1.6
+      uses: appleboy/scp-action@v1.2.2
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         source: "build/*"
         target: "/var/www/infinitysupportservices.com.au/"
 
     - name: 🔁 Reload Caddy
-      uses: appleboy/ssh-action@v0.1.10
+      uses: appleboy/ssh-action@v1.2.2
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           echo "Reloading Caddy..."
           sudo systemctl reload caddy
