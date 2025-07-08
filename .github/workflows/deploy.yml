@@ -12,38 +12,29 @@ jobs:
     steps:
     - name: 📥 Checkout repo
       uses: actions/checkout@v3
-    
-    - name: Check SSH key presence
+
+    - name: 🧱 Build React
       run: |
-        if [ -z "${{ secrets.SSH_PRIVATE_KEY }}" ]; then
-          echo "SSH_PRIVATE_KEY is empty"
-          exit 1
-        else
-          echo "SSH_PRIVATE_KEY is set"
-        fi
+        npm ci
+        npm run build
 
-    # - name: 🧱 Build React
-    #   run: |
-    #     npm ci
-    #     npm run build
+    - name: 📤 Deploy build to server via SCP
+      uses: appleboy/scp-action@v1
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        port: ${{ secrets.PORT }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        source: "build/*"
+        target: "/var/www/infinitysupportservices.com.au/"
 
-    # - name: 📤 Deploy build to server via SCP
-    #   uses: appleboy/scp-action@v1
-    #   with:
-    #     host: ${{ secrets.HOST }}
-    #     username: ${{ secrets.USERNAME }}
-    #     port: ${{ secrets.PORT }}
-    #     key: ${{ secrets.SSH_PRIVATE_KEY }}
-    #     source: "build/*"
-    #     target: "/var/www/infinitysupportservices.com.au/"
-
-    # - name: 🔁 Reload Caddy
-    #   uses: appleboy/ssh-action@v1
-    #   with:
-    #     host: ${{ secrets.HOST }}
-    #     username: ${{ secrets.USERNAME }}
-    #     port: ${{ secrets.PORT }}
-    #     key: ${{ secrets.SSH_PRIVATE_KEY }}
-    #     script: |
-    #       echo "Reloading Caddy..."
-    #       sudo systemctl reload caddy
+    - name: 🔁 Reload Caddy
+      uses: appleboy/ssh-action@v1
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        port: ${{ secrets.PORT }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          echo "Reloading Caddy..."
+          sudo systemctl reload caddy
