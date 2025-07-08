@@ -18,7 +18,7 @@ jobs:
         npm run build
 
     - name: 📤 Deploy build to server via SCP
-      uses: appleboy/scp-action@v1.2.2
+      uses: appleboy/scp-action@v1
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
@@ -28,7 +28,7 @@ jobs:
         target: "/var/www/infinitysupportservices.com.au/"
 
     - name: 🔁 Reload Caddy
-      uses: appleboy/ssh-action@v1.2.2
+      uses: appleboy/ssh-action@v1
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
