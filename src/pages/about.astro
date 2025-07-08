@@ -2,16 +2,10 @@
 import Mission from "../assets/mission.jpg";
 import Vision from "../assets/vision.jpg";
 import Values from "../assets/values.jpeg";
-import Angelina from "../assets/PHOTO_Angelina.jpg";
-import Clare from "../assets/PHOTO_Clare.jpg";
-import Erica from "../assets/PHOTO_Erica.jpg";
-import Fred from "../assets/PHOTO_Fred.jpg";
-import James from "../assets/PHOTO_James.jpg";
-import Jordon from "../assets/PHOTO_Jordon.jpg";
-import Kylie from "../assets/PHOTO_Kylie.jpg";
-import Tina from "../assets/PHOTO_Tina.jpg";
 import Layout from "../layouts/Layout.astro";
 import TeamCard from "../components/TeamCard.astro";
+import { getCollection } from "astro:content";
+const teams = await getCollection("team");
 ---
 
 <Layout title="About Us | Infinity Support Services">
@@ -54,7 +48,7 @@ import TeamCard from "../components/TeamCard.astro";
             </figure>
             <div class="card-body justify-center items-center text-center">
                 <h2 class="card-title text-3xl">Our Mission</h2>
-                <p class="text-black">We’re committed to supporting people with disability and mental health challenges to actively participate in their communities. Our goal is to empower individuals to live with dignity, respect, and equal rights through meaningful connection and inclusive support.</p>
+                <p class="text-black">We're committed to supporting people with disability and mental health challenges to actively participate in their communities. Our goal is to empower individuals to live with dignity, respect, and equal rights through meaningful connection and inclusive support.</p>
             </div>
         </div>
         <div class="card w-96 h-108 lg:my-0 my-5 bg-white shadow-md text-[#6cab38] hover:transform hover:scale-105 transition-transform duration-300">
@@ -78,85 +72,14 @@ import TeamCard from "../components/TeamCard.astro";
     <div>
         <h1 class="text-4xl font-semibold text-center text-[#116089] mt-10">Meet Our Team</h1>
         <div class="flex flex-col items-center justify-center lg:grid lg:grid-flow-row lg:grid-cols-4 gap-4 m-10">
-            <TeamCard
-                name="James Jai"
-                jobTitle="Program Manager"
-                image={James.src}
-                description={`With over 14 years of experience, James has dedicated his career to supporting individuals with diverse needs, including mental health challenges, alcohol and drug dependencies, disabilities, and aged care. He brings a wealth of expertise to his role, combined with a strong academic foundation. James holds a Bachelor of Community Mental Health and AOD, a Diploma of Education, a Certificate IV in Disability, and a Certificate in Training and Assessment.
-
-                James is deeply passionate about empowering individuals to achieve theirgoals, and throughout his career, he has held various leadership roles across a wide range of organizations. His experience spans multiple sectors, including disability, mental health, and aged care, where he has been instrumental in leading teams and supporting diverse groups in both community and institutional settings.`}
-            />
-            <TeamCard
-                name="Kylie Skilbeck"
-                jobTitle="Service Delivery and Business Development Manager"
-                image={Kylie.src}
-                description={`Kylie has a wealth of experience in the disability field, with over 20 years of both professional and personal experience. Her calm, approachable demeanor makes people feel truly valued and supported, enabling her to build strong relationships quickly.
-
-Starting her career in disability employment, Kylie found a natural fit in helping some of the most vulnerable members of the community find meaningful and sustainable work. This led her to transition into a business development role, where she could extend her impact and empower even more people through employment opportunities.
-
-Kylie then took on a management role within the disability sector, guiding and supporting her team. However, she soon realised her passion for direct client interaction and the day-to-day impact of working closely with individuals. This led her to explore the NDIS field, where she connects people with disabilities to services that help them live their best lives.
-
-Kylie's journey showcases her unwavering dedication to improving the lives of people with disabilities, with a deep commitment to making meaningful, lasting differences in their lives.`}
-            />
-            <TeamCard
-                name="Fred Evans Kenyi"
-                jobTitle="Human Resource Manager, People and Culture"
-                image={Fred.src}
-                description={`With 16 years of dedicated experience in the disability sector, Fred has extensive expertise in providing comprehensive assistance to individuals with diverse needs. Fred's career has been built on a foundation of empathy, advocacy, and specialized knowledge that enables him to create meaningful impact in the lives of the people we support.
-
-Fred is also an experienced Strategic Human Resources leader, with 6 years of distinguished experience in HR management and cultivating thriving workplace cultures. He holds a number of qualifications, including a Bachelor's degree in Education (majoring in Economics), a Diploma of Mental Health, a Diploma of Community Services (with a focus in Case Management), and Certificates in Disability, Individual Support, and Leisure and Health.
-
-Fred has demonstrated expertise in transforming organizational culture, implementing people-first initiatives, and aligning human capital strategies with business objectives. He is known for building inclusive environments that drive employee engagement, retention, and business performance.
-
-Fred has led comprehensive culture transformation initiatives resulting in measurable improvements in employee engagement scores and reduced turnover. He has designed and implemented strategic talent management frameworks that align with organizational values and objectives, developed innovative people programs that strengthen company culture while supporting business growth, and championed diversity, equity, and inclusion initiatives that foster a more inclusive workplace culture.
-`}
-            />
-            <TeamCard
-                name="Jordon"
-                jobTitle="Community and Support Coordination Manager"
-                image={Jordon.src}
-                description={`Jordon is a benevolent and considerate professional with nearly a decade of experience across the greater community services sector, primarily focusing on disability and forensics. Passionate about delivering person-centred care, Jordon is dedicated to supporting individuals with diverse needs while promoting social inclusion, independence, and the achievement of personal goals.
-
-Recently transitioning into management, Jordon is enthusiastic about continuous improvement and effective communication. He fosters an environment of respect, dignity, and empathy for clients, families, and staff alike, ensuring that the highest standards of care and support are always upheld.`}
-            />
-            <TeamCard
-                name="Tina" 
-                jobTitle="Accommodation Manager"
-                image={Tina.src}
-                description={`Tina is an energetic and enthusiastic professional with roughly 15 years' experience in the community services sector, where she has developed a deep passion for the National Disability Insurance Scheme.
-
-She began her career in complex disability support, where she quickly gained an understanding of the diverse needs of individuals and their families. Over the years, Tina has broadened her expertise to include mental health services and case management. This has led to her acquiring a diverse set of skills that allow her to work effectively with clients facing a variety of challenges.
-
-Tina's dynamic approach to work fosters a positive and lively atmosphere, making her approachable and effective in building relationships with colleagues, clients, and care teams.`}
-            />
-            <TeamCard
-                name="Angelina Koumourou"
-                jobTitle="Support Coordination / Administration"
-                image={Angelina.src}
-                description={`Driven by heart and a deep desire to make a difference, Angelina brings her strong sense of purpose and people-first mindset to the world of NDIS. While new to the industry, her determination, organisation, and exceptional communication skills make her a natural fit for supporting participants and their families.
-
-With a background in customer relations and a passion for helping others, Angelina is excited to grow within the sector and contribute meaningfully to the lives of those around her.`}
-            />
-            <TeamCard
-                name="Clare Horner"
-                jobTitle="Rostering and Recruitment Officer"
-                image={Clare.src}
-                description={`Clare has dedicated nearly 20 years to the disability sector, a field she feels deeply passionate about, with many of her family members also working in the industry. She began her career in Supported Independent Living (SIL), before transitioning to Day Placement after taking time to raise her child.
-
-Throughout her career, Clare has consistently demonstrated a compassionate and committed approach to every task she undertakes. She has progressed from a Direct Support Worker to the role of 2IC, and later shifted her focus to Intake, where she has excelled in supporting participants to achieve their goals.
-
-More recently, Clare transitioned into rostering and recruitment, where she ensures that participants continue to receive the support they need while also helping new support workers find meaningful roles within the field.`}
-            />
-            <TeamCard
-                name="Erica Ethel K."
-                jobTitle="Accounts Assistant"
-                image={Erica.src}
-                description={`Erica Ethel is an experienced accounts assistant with over seven years in the field, supporting both local and international teams. She began her career in Malaysia, spending two years as an Audit-Tax Associate in an audit firm, four years in property management, and one year in the F&B industry as an Accounts Executive.
-
-She later expanded her experience to New Zealand, working as a finance assistant in a semi-government transport agency for seven months and in a property development and consulting firm for three months. Now based remotely, Erica continues to support businesses as a virtual accounts assistant, known for her reliability, attention to detail, and steady approach to day-to-day financial operations.
-
-She's adaptable, open to learning, and committed to continuous improvement. With hands-on experience in reconciliations, invoicing, and financial reporting, she strives to support smooth financial processes while growing with every challenge.`}
-            />
+            {teams.map((team) => (
+                <TeamCard
+                    name={team.data.name}
+                    jobTitle={team.data.title}
+                    image={team.data.image}
+                    description={team.body}
+                />
+            ))}
         </div>
     </div>
 </Layout>
