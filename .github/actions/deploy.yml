@@ -1,4 +1,4 @@
-name: Deploy React App to Caddy
+name: Deploy website
 
 on:
   push:
