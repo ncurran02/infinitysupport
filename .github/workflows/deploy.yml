@@ -54,9 +54,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: |
-            package.json
-            package-lock.json
+          source: "./package.json,./package-lock.json"
           target: "/var/www/infinitysupportservices.com.au/"
 
     - name: 🔁 Reload Caddy
