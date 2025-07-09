@@ -2,6 +2,7 @@
 name: Erica Ethel K.
 title: Accounts Assistant
 image: /team/PHOTO_Erica.jpg
+orderId: 4
 ---
 
 Erica Ethel is an experienced accounts assistant with over seven years in the field, supporting both local and international teams. She began her career in Malaysia, spending two years as an Audit-Tax Associate in an audit firm, four years in property management, and one year in the F&B industry as an Accounts Executive.

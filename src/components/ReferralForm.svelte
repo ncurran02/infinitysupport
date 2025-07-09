@@ -179,7 +179,7 @@
         });
 
         try {
-            const response = await fetch("/api/contact", {
+            const response = await fetch("https://infinitysupport.heathcotetech.com.au/api/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -472,7 +472,7 @@
                 <h3 class="text-md"><span class="text-[#116089] font-semibold">File Count: </span> {countFiles()}</h3>
             </div>
         </div>
-        <Turnstile siteKey="0x4AAAAAABabC5nznMKeH-P_" class="m-5" />
+        <Turnstile siteKey="0x4AAAAAABjhcncBzAZebAHX" class="m-5" />
         <div class="flex flex-row justify-center">
             <button on:click={previous} class="btn btn-md bg-[#116089] hover:bg-[#116089]/85 text-white w-1/2 m-5" type="button">Back</button>
             <button class="btn btn-md bg-[#6cab38] hover:bg-[#6cab38]/85 text-white w-1/2 m-5" type="submit"><span class="{loading ? 'loading loading-dots loading-md' : ''}"></span>{loading ? '' : 'Submit'}</button>

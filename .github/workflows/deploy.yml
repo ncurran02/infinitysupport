@@ -17,6 +17,25 @@ jobs:
       run: |
         npm ci
         npm run build
+    
+    - name: Remove files from the server
+      uses: appleboy/ssh-action@v1
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        port: ${{ secrets.PORT }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          echo "Checking if the directory exists on the server..."
+          if [ -d "/var/www/infinitysupportservices.com.au" ]; then
+            echo "Removing old files but preserving the .env file..."
+            cd /var/www/infinitysupportservices.com.au
+            shopt -s extglob
+            rm -rf !(env)
+            echo "Old files removed successfully."
+          else
+            echo "Target directory does not exist. Skipping removal."
+          fi
 
     - name: 📤 Deploy build to server via SCP
       uses: appleboy/scp-action@v1

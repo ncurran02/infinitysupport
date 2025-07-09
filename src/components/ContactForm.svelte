@@ -24,7 +24,7 @@
         });
 
         try {
-            const response = await fetch("/api/contact", {
+            const response = await fetch("https://infinitysupport.heathcotetech.com.au/api/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -87,7 +87,7 @@
             <label class="text-xl text-[#116089] font-semibold" for="message">Message</label>
             <textarea class="input validator w-full h-40 p-2" id="message" name="message" placeholder="Message" required></textarea>
         </div>
-        <Turnstile siteKey="0x4AAAAAABabC5nznMKeH-P_" class="m-3" />
+        <Turnstile siteKey="0x4AAAAAABjhcncBzAZebAHX" class="m-3" />
         <button class="btn btn-md bg-[#6cab38] text-white w-2/3" type="submit"><span class="{loading ? 'loading loading-dots loading-md' : ''}"></span>{loading ? '' : 'Submit'}</button>
     </form>
 </div>

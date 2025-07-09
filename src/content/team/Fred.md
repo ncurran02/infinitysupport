@@ -2,6 +2,7 @@
 name: Fred Evans Kenyi
 title: Human Resource Manager, People and Culture
 image: /team/PHOTO_Fred.jpg
+orderId: 5
 ---
 
 With 16 years of dedicated experience in the disability sector, Fred has extensive expertise in providing comprehensive assistance to individuals with diverse needs. Fred's career has been built on a foundation of empathy, advocacy, and specialized knowledge that enables him to create meaningful impact in the lives of the people we support.

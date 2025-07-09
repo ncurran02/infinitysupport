@@ -2,6 +2,7 @@
 name: Tina
 title: Accommodation Manager
 image: /team/PHOTO_Tina.jpg
+orderId: 7
 ---
 
 Tina is an energetic and enthusiastic professional with roughly 15 years' experience in the community services sector, where she has developed a deep passion for the National Disability Insurance Scheme.

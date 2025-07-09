@@ -72,7 +72,7 @@ const teams = await getCollection("team");
     <div>
         <h1 class="text-4xl font-semibold text-center text-[#116089] mt-10">Meet Our Team</h1>
         <div class="flex flex-col items-center justify-center lg:grid lg:grid-flow-row lg:grid-cols-4 gap-4 m-10">
-            {teams.map((team) => (
+            {teams.sort((a, b) => a.data.orderId - b.data.orderId).map((team) => (
                 <TeamCard
                     name={team.data.name}
                     jobTitle={team.data.title}

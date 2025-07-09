@@ -2,6 +2,7 @@
 name: Kylie Skilbeck
 title: Service Delivery and Business Development Manager
 image: /team/PHOTO_Kylie.jpg
+orderId: 3
 ---
 
 Kylie has a wealth of experience in the disability field, with over 20 years of both professional and personal experience. Her calm, approachable demeanor makes people feel truly valued and supported, enabling her to build strong relationships quickly.
