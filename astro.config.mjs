@@ -4,15 +4,17 @@ import tailwindcss from "@tailwindcss/vite";
 
 import svelte from "@astrojs/svelte";
 
-import cloudflare from "@astrojs/cloudflare";
+import node from "@astrojs/node";
 
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
 
-  output: "static",
+  output: "server",
 
   integrations: [svelte()],
-  adapter: cloudflare(),
+  adapter: node({
+    mode: "standalone",
+  }),
 });

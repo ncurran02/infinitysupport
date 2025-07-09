@@ -47,6 +47,18 @@ jobs:
         source: "dist/*"
         target: "/var/www/infinitysupportservices.com.au/"
 
+    - name: 🧾 Upload package.json + lockfile
+      uses: appleboy/scp-action@v0.1.6
+      with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: |
+            package.json
+            package-lock.json
+          target: "/var/www/infinitysupportservices.com.au/"
+
     - name: 🔁 Reload Caddy
       uses: appleboy/ssh-action@v1
       with:
@@ -55,5 +67,6 @@ jobs:
         port: ${{ secrets.PORT }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          echo "Reloading Caddy..."
-          sudo systemctl reload caddy
+          echo "Reloading web service..."
+          sudo npm install --omit=dev
+          sudo systemctl restart infinity-web
