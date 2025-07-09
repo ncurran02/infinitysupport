@@ -66,5 +66,6 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           echo "Reloading web service..."
+          cd /var/www/infinitysupportservices.com.au
           sudo npm install --omit=dev
           sudo systemctl restart infinity-web
