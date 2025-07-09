@@ -31,7 +31,7 @@ jobs:
             echo "Removing old files but preserving the .env file..."
             cd /var/www/infinitysupportservices.com.au
             shopt -s extglob
-            rm -rf !(.env)
+            find "$TARGET_DIR" -mindepth 1 ! -name '.env' -exec rm -rf {} +
             echo "Old files removed successfully."
           else
             echo "Target directory does not exist. Skipping removal."
