@@ -1,6 +1,6 @@
 ---
 name: Camille Ysabel
-title: House Manager and Support Worker
+title: Housing & Admin Solutions Officer
 image: /team/PHOTO_Camille.jpg
 orderId: 21
 ---
