@@ -1,6 +1,6 @@
 ---
 name: Martha
-title: House Manager and Support Worker
+title: House Supervisor and Support Worker
 image: /team/PHOTO_Martha.jpg
 orderId: 20
 ---

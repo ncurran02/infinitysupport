@@ -1,6 +1,6 @@
 ---
 name: Danielle Arnett
-title: House Manager and Support Worker
+title: House Supervisor and Support Worker
 image: /team/PHOTO_Danielle.jpg
 orderId: 17
 ---

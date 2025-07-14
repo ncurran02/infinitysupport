@@ -1,6 +1,6 @@
 ---
 name: Ivan Ssozi
-title: House Manager and Support Worker
+title: House Supervisor and Support Worker
 image: /team/PHOTO_Ivan.jpg
 orderId: 18
 ---

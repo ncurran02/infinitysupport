@@ -1,6 +1,6 @@
 ---
 name: Dylan Newchurch
-title: House Manager and Support Worker
+title: House Supervisor and Support Worker
 image: /team/PHOTO_Dylan.jpg
 orderId: 16
 ---
