@@ -1,5 +1,5 @@
 ---
-name: Damian Newchurch
+name: Damian Grenfell
 title: House Manager and Support Worker
 image: /team/PHOTO_Damian.jpg
 orderId: 15

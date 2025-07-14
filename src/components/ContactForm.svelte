@@ -47,6 +47,7 @@
             success = false;
             hidden = false;
             msg = "Something went wrong when trying to send a message...";
+            console.log(error);
         }
 
         if (success) {
