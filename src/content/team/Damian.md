@@ -1,6 +1,6 @@
 ---
 name: Damian Grenfell
-title: House Supervisor and Support Worker
+title: House Supervisor
 image: /team/PHOTO_Damian.jpg
 orderId: 15
 ---

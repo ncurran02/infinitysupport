@@ -1,6 +1,6 @@
 ---
 name: Stanley Abednego
-title: House Supervisor and Support Worker
+title: House Supervisor
 image: /team/PHOTO_Stanley.jpg
 orderId: 10
 ---

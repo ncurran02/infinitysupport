@@ -1,6 +1,6 @@
 ---
 name: Jackson Llewellyn
-title: House Supervisor and Support Worker
+title: House Supervisor
 image: /team/PHOTO_Jackson.jpg
 orderId: 12
 ---

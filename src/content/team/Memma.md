@@ -1,6 +1,6 @@
 ---
 name: Memma Sergbah
-title: House Supervisor and Support Worker
+title: House Supervisor
 image: /team/PHOTO_Memma.jpg
 orderId: 14
 ---

@@ -1,6 +1,6 @@
 ---
 name: Amandeep Kaur
-title: House Supervisor and Support Worker
+title: House Supervisor
 image: /team/PHOTO_Amandeep.jpg
 orderId: 13
 ---

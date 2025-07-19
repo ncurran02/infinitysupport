@@ -1,6 +1,6 @@
 ---
 name: Hannah Fraser
-title: House Supervisor and Support Worker
+title: House Supervisor
 image: /team/PHOTO_Hannah.jpg
 orderId: 11
 ---
