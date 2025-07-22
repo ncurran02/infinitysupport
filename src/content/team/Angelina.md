@@ -1,5 +1,5 @@
 ---
-name: Angelina Koumourou
+name: Angelina
 title: Support Coordination / Administration
 image: /team/PHOTO_Angelina.jpg
 orderId: 8
